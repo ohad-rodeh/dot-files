@@ -1,0 +1,1448 @@
+((("ReadCache" .
+   [0 0 0 0 0 1 0 0 0])
+  ("minBaseQual" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("Config" .
+   [2 0 0 0 0 0])
+  ("finalPhredScaledGenotypeLikelihoods" .
+   [0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("RefVsAnyResult" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("RefVsAnyResul" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("pe" .
+   [2 0])
+  ("base" .
+   [2 0 0 0])
+  ("int8_t" .
+   [3 0 0 0 0 0])
+  ("pileup" .
+   [2 0 0 0 0 0])
+  ("begin" .
+   [1 0 0 0 0])
+  ("bp" .
+   [1 0])
+  ("elements" .
+   [4 0 0 0 0 0 0 0])
+  ("shared_ptr" .
+   [1 0 0 0 0 0 0 1 0 0])
+  ("PileupElement" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("isDeletion" .
+   [1 0 0 0 0 0 1 0 0 0])
+  ("isAlt" .
+   [1 0 0 0 0])
+  ("qual" .
+   [6 0 0 0])
+  ("totTimeNs" .
+   [0 0 0 0 2 0 0 0 0])
+  ("delta" .
+   [1 0 0 0 0])
+  ("endTimeNs" .
+   [0 0 0 0 0 1 0 0 0])
+  ("diff" .
+   [1 0 0 0])
+  ("startTimeNs" .
+   [1 0 0 0 0 0 0 0 0 0 1])
+  ("part2Pcnt" .
+   [0 0 0 0 0 0 1 0 0])
+  ("totNs" .
+   [1 0 0 0 0])
+  ("part2TotNs" .
+   [0 0 0 0 0 0 2 0 0 0])
+  ("part2Ns" .
+   [1 0 0 0 0 0 0])
+  ("nanoTime" .
+   [1 0 0 0 2 1 0 0])
+  ("startTime" .
+   [3 0 0 0 0 0 2 0 0])
+  ("cstdint" .
+   [1 0 0 0 0 0 0])
+  ("filesystem" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("referenceIndex" .
+   [1 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("at" .
+   [1 0])
+  ("endPos" .
+   [1 0 0 0 0 0])
+  ("startPos" .
+   [3 0 0 0 0 0 1 0])
+  ("chrom" .
+   [1 0 0 0 0])
+  ("readInterval" .
+   [0 0 0 0 0 0 1 0 0 0 0 0])
+  ("FastaReader" .
+   [0 0 0 1 0 2 0 0 0 0 0])
+  ("faReader" .
+   [1 0 1 4 0 0 0 0])
+  ("fasta_reader" .
+   [1 0 0 0 0 0 1 0 0 0 0 0])
+  ("reference" .
+   [3 0 0 0 0 2 0 0 0])
+  ("fasta" .
+   [1 0 0 0 0])
+  ("gOpts" .
+   [3 0 0 0 0])
+  ("len" .
+   [7 0 0])
+  ("substr" .
+   [0 0 0 0 1 0])
+  ("iss" .
+   [4 0 0])
+  ("r" .
+   [1])
+  ("upload_script" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("upload_libs" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("local_path" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("copyfile" .
+   [1 0 0 0 0 0 0 0])
+  ("length" .
+   [2 0 0 0 0 0])
+  ("endsWith" .
+   [2 0 0 0 0 0 0 0])
+  ("get_id" .
+   [3 0 0 0 0 0])
+  ("project" .
+   [13 0 0 0 1 0 0])
+  ("DXWorkflow" .
+   [0 0 0 1 0 0 0 0 0 0])
+  ("DXProject" .
+   [0 0 0 1 0 0 0 0 0])
+  ("dxProject" .
+   [0 0 0 1 1 0 0 0 0])
+  ("check_call" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("line" .
+   [1 0 0 0])
+  ("release_project" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("config_file" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("folder" .
+   [11 0 0 0 0 0])
+  ("make_prerequisits" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("lazy" .
+   [1 0 0 0])
+  ("more_ok" .
+   [1 0 0 0 0 0 0])
+  ("uploadString" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("jsOfBasicWdlValue" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("outputFieldOfWdlVa" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("outputFields" .
+   [0 0 0 0 0 0 0 1 0 0 1 0])
+  ("ofWdlValueOutputField" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("unmarshalFileContent" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("wdlValueOfInputField" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("wdlValueOfInput" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("trgFile" .
+   [0 0 0 0 1 0 0])
+  ("resolve" .
+   [1 0 0 0 0 0 0])
+  ("tmp" .
+   [1 0 0])
+  ("unmarshal" .
+   [1 0 0 0 0 1 0 0 0])
+  ("downloadFile" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("genFields" .
+   [0 0 0 0 1 0 0 0 0])
+  ("ioref" .
+   [1 0 0 0 0])
+  ("ofWdlValue" .
+   [0 0 0 1 0 1 1 0 0 0])
+  ("jsonOfDxFile" .
+   [0 0 0 0 0 0 0 0 0 1 0 0])
+  ("l" .
+   [1])
+  ("WdlArray" .
+   [2 0 0 0 0 0 0 0])
+  ("uploadFile" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("jsOfWdlValue" .
+   [0 0 0 0 0 0 0 2 0 0 0 0])
+  ("IORef" .
+   [1 0 1 0 0])
+  ("intervals" .
+   [3 0 0 0 0 0 0 0 0])
+  ("sequences" .
+   [1 0 0 0 0 0 0 0 0])
+  ("cat" .
+   [2 0 0])
+  ("echo" .
+   [3 0 0 0])
+  ("to" .
+   [1 0])
+  ("downloadRetryLimit" .
+   [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0])
+  ("download" .
+   [2 0 0 0 0 1 0 0])
+  ("retryLimit" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("could" .
+   [1 0 0 0 0])
+  ("counter" .
+   [7 0 0 0 0 0 0])
+  ("downloadOneFile" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("Throwable" .
+   [0 0 0 1 1 0 0 0 0])
+  ("fname" .
+   [3 0 0 0 0])
+  ("baseLocalDir" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("wdl" .
+   [2 0 0])
+  ("m2" .
+   [2 0])
+  ("prettyPrint" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("xxx" .
+   [1 0 0])
+  ("parseJson" .
+   [1 0 0 0 0 0 0 0 0])
+  ("dxType" .
+   [1 0 0 0 0 0])
+  ("v" .
+   [1])
+  ("optionals" .
+   [1 0 0 0 0 0 0 0 0])
+  ("marshal" .
+   [4 0 0 0 0 0 0])
+  ("should" .
+   [1 0 0 0 0 0])
+  ("compile_only" .
+   [2 0 0 0 0 0 0 0 0 0 0 0])
+  ("compil" .
+   [2 0 0 0 0 0])
+  ("JsBoolean" .
+   [0 0 0 0 1 0 0 0 0])
+  ("default" .
+   [1 0 0 0 0 0 0])
+  ("JsObject" .
+   [1 0 0 0 0 0 0 0])
+  ("asJsObject" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("core" .
+   [6 0 0 0])
+  ("nonOptional" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("species" .
+   [1 0 0 0 0 0 0])
+  ("Register" .
+   [0 0 0 0 0 1 0 0])
+  ("shCommand" .
+   [1 0 0 0 0 0 0 0 0])
+  ("cmd" .
+   [1 0 0])
+  ("command" .
+   [1 0 0 0 0 0 0])
+  ("contamination" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("bwa" .
+   [1 0 0])
+  ("num" .
+   [2 0 0])
+  ("Value" .
+   [1 0 0 0 0])
+  ("InputOutput" .
+   [3 0 0 0 0 0 3 1 0 0 0])
+  ("io" .
+   [4 0])
+  ("fieldsOf" .
+   [1 0 0 0 0 0 0 0])
+  ("Output" .
+   [3 0 1 3 0 0])
+  ("Input" .
+   [6 0 0 0 0])
+  ("AppInternalEx" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("elemType" .
+   [1 0 0 0 0 0 0 0])
+  ("AppInternalException" .
+   [0 0 0 0 0 0 0 0 0 0 0 2 0 1 0 0 1 0 0 0])
+  ("IOClass" .
+   [0 0 0 0 1 0 0])
+  ("ofInputField" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("toList" .
+   [7 0 0 0 0 0])
+  ("JsArray" .
+   [3 0 0 2 1 0 0])
+  ("toMap" .
+   [2 0 0 0 0])
+  ("jsonNode" .
+   [1 0 0 0 0 0 0 0])
+  ("flatten" .
+   [4 0 0 0 0 0 0])
+  ("outputFieldsOf" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("jsl" .
+   [5 0 0])
+  ("dxlink" .
+   [2 0 0 0 0 0])
+  ("WdlVarLinks" .
+   [4 0 0 0 1 0 0 6 0 0 0])
+  ("json" .
+   [6 0 0 0])
+  ("JsValue" .
+   [9 0 0 2 2 1 0])
+  ("RAGGED_ARRAY_SUFFIX" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("NotImplementedError" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("jsonNodeOfJsValue" .
+   [0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0])
+  ("varEncName" .
+   [1 0 0 0 0 0 2 0 0 0])
+  ("wvl" .
+   [18 0 0])
+  ("jsn" .
+   [3 0 0])
+  ("js" .
+   [2 0])
+  ("jsValueOfJsonNode" .
+   [0 0 0 0 1 0 0 0 0 3 0 0 0 0 0 0 0])
+  ("cas" .
+   [2 0 0])
+  ("jsNode" .
+   [13 0 0 0 0 0])
+  ("dxJob" .
+   [1 0 0 0 0])
+  ("dxVal" .
+   [1 0 0 0 0])
+  ("dxStage" .
+   [3 0 0 0 0 0 0])
+  ("An" .
+   [3 0])
+  ("workflow" .
+   [1 0 0 0 0 0 0 0])
+  ("sw" .
+   [1 0])
+  ("wdlSourceFile" .
+   [0 0 0 0 1 0 0 0 0 0 1 0 0])
+  ("wdlSource" .
+   [0 0 0 0 1 0 0 0 0])
+  ("call" .
+   [1 0 0 0])
+  ("compileCall" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("item" .
+   [1 0 0 0])
+  ("scatter" .
+   [1 0 0 0 0 0 0])
+  ("remove" .
+   [1 0 0 0 0 0])
+  ("closure" .
+   [2 0 0 0 0 0 0])
+  ("outstr" .
+   [3 0 0 0 0 0])
+  ("destination" .
+   [7 0 0 0 4 1 0 0 0 0 0])
+  ("dest" .
+   [2 0 0 0])
+  ("stageName" .
+   [1 0 0 0 0 0 0 0 0])
+  ("collectionType" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("WdlArrayType" .
+   [1 0 0 0 0 0 0 0 0 1 1 0])
+  ("arType" .
+   [1 0 0 0 0 0])
+  ("collection" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("evalulate" .
+   [1 0 0 0 0 0 0 0 0])
+  ("Could" .
+   [1 0 0 0 0])
+  ("Scatter" .
+   [1 0 0 0 0 0 0])
+  ("Call" .
+   [1 0 0 0])
+  ("Workflow" .
+   [1 0 0 0 0 0 0 0])
+  ("Declaration" .
+   [1 0 0 0 0 0 0 2 0 0 0])
+  ("immutable" .
+   [3 0 0 0 2 0 0 0 0])
+  ("wf" .
+   [5 0])
+  ("additionalInfo" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("o" .
+   [1])
+  ("preExprBuilder" .
+   [0 0 0 0 0 0 0 0 1 2 0 0 0 0])
+  ("preExpr" .
+   [2 0 0 0 0 0 0])
+  ("put" .
+   [2 0 0])
+  ("p" .
+   [2])
+  ("preEnvBuilder" .
+   [0 0 0 0 0 0 0 1 3 0 0 0 0])
+  ("preEnv" .
+   [1 0 0 0 0 1])
+  ("ObjectBuilder" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("Object" .
+   [0 0 0 0 1 0])
+  ("WdlExpression" .
+   [0 0 0 0 3 2 0 0 0 0 0 0 0])
+  ("build" .
+   [3 0 0 0 0])
+  ("applInExpr" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("inputBuilder" .
+   [0 0 0 0 0 0 1 1 0 0 0 0])
+  ("inputs" .
+   [2 0 0 0 0 0])
+  ("env" .
+   [6 0 0])
+  ("varRef" .
+   [1 0 0 0 0 0])
+  ("varName" .
+   [6 0 0 0 0 0 0])
+  ("variable" .
+   [1 0 0 0 0 0 0 0])
+  ("found" .
+   [1 0 0 0 0])
+  ("not" .
+   [2 0 0])
+  ("toString" .
+   [3 0 0 1 0 0 0 0])
+  ("expr" .
+   [2 0 0 0])
+  ("ast" .
+   [1 0 0])
+  ("mutable" .
+   [1 0 0 0 0 0 0])
+  ("ObjectNode" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("foreach" .
+   [5 0 0 0 0 0 0])
+  ("test_names" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("dxwfl" .
+   [4 0 0 0 0])
+  ("getId" .
+   [5 0 0 0 0])
+  ("stage" .
+   [2 0 0 0 0])
+  ("reqOutput" .
+   [1 0 0 0 0 0 0 0 0])
+  ("reqInput" .
+   [1 0 0 0 0 0 0 0])
+  ("output" .
+   [2 0 0 0 0 0])
+  ("DXStage" .
+   [1 0 0 0 0 0 0])
+  ("inputReq" .
+   [2 0 0 0 0 0 0 0])
+  ("input" .
+   [1 0 0 0 0])
+  ("ID" .
+   [1 0])
+  ("abspath" .
+   [1 0 0 0 0 0 0])
+  ("ignore_bcftools_comments" .
+   [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Failure" .
+   [2 0 0 0 0 0 0])
+  ("Success" .
+   [2 0 0 0 0 0 0])
+  ("Try" .
+   [1 0 0])
+  ("util" .
+   [8 0 0 0])
+  ("WdlFloat" .
+   [1 0 0 0 0 1 2 1])
+  ("WdlInteger" .
+   [1 0 0 0 0 2 0 1 0 0])
+  ("WdlString" .
+   [2 0 0 0 0 2 1 0 0])
+  ("jsValue" .
+   [9 0 0 5 3 1 0])
+  ("toWdlString" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("wType" .
+   [2 0 0 0 0])
+  ("convert" .
+   [1 0 0 0 0 0 0])
+  ("WdlType" .
+   [3 0 0 0 1 0 0])
+  ("wdlType" .
+   [16 0 0 0 5 0 0])
+  ("fields" .
+   [5 0 0 0 0 0])
+  ("types" .
+   [1 0 0 0 0])
+  ("jobInputPath" .
+   [1 0 0 0 0 2 0 0 0 0 0 0])
+  ("Task" .
+   [3 0 0 0])
+  ("WdlValue" .
+   [2 0 0 0 1 2 0 0])
+  ("decl" .
+   [8 0 0 0])
+  ("map" .
+   [13 0 0])
+  ("decls" .
+   [2 0 0 0 0])
+  ("sudo" .
+   [1 0 0 0])
+  ("valueTreeString" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("value" .
+   [1 0 0 0 0])
+  ("version" .
+   [5 0 0 0 0 0 0])
+  ("dirPath" .
+   [1 0 0 0 0 0 0])
+  ("TEST_DIR" .
+   [1 0 0 0 0 0 0 0])
+  ("Paths" .
+   [2 0 0 0 0])
+  ("Path" .
+   [6 0 0 0])
+  ("calc_info_column" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("info_column" .
+   [0 0 0 0 0 0 3 3 0 0 0])
+  ("errstr" .
+   [1 0 0 0 0 0])
+  ("write" .
+   [2 0 0 0 0])
+  ("Files" .
+   [3 0 0 0 0])
+  ("head" .
+   [1 0 0 0])
+  ("File" .
+   [12 0 0 1])
+  ("dryrun" .
+   [1 0 0 0 0 0])
+  ("src" .
+   [1 0 0])
+  ("split_file" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("split" .
+   [2 0 0 0 0])
+  ("join_by" .
+   [1 0 0 0 0 0 0])
+  ("nr_samples_in_file" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("sam_list" .
+   [1 0 0 0 0 0 0 0])
+  ("range" .
+   [2 0 0 0 0])
+  ("samp" .
+   [1 0 0 0])
+  ("arg" .
+   [2 0 0])
+  ("sub_samples" .
+   [3 0 0 0 0 0 0 0 0 0 0])
+  ("samples" .
+   [2 0 0 0 0 0 0])
+  ("target_nr_samples" .
+   [0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0])
+  ("nr_samples" .
+   [2 0 0 0 0 1 0 0 0 0])
+  ("buffer_size" .
+   [1 0 0 0 0 0 0 0 0 1 0])
+  ("outfile" .
+   [1 0 0 0 0 0 0])
+  ("logger" .
+   [5 0 0 0 0 0])
+  ("init_db" .
+   [1 0 0 0 0 0 0])
+  ("cli_utils" .
+   [1 0 0 0 0 0 0 0 0])
+  ("finish" .
+   [1 0 0 0 0 0])
+  ("got" .
+   [1 0 0])
+  ("REQUIRE" .
+   [0 0 0 0 1 0 0])
+  ("exemplar_gvcf" .
+   [0 0 0 0 0 0 0 0 0 0 0 2 0])
+  ("exemplar" .
+   [0 0 0 0 2 0 0 0])
+  ("info" .
+   [2 0 0 0])
+  ("check_file_exists" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("utils" .
+   [4 0 0 0 0])
+  ("gz" .
+   [1 0])
+  ("SECTION" .
+   [1 0 0 0 0 0 0])
+  ("start" .
+   [2 0 0 0 0])
+  ("delim" .
+   [1 0 0 0 0])
+  ("first_time" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("stringstream" .
+   [1 0 0 0 0 0 0 0 0 1 0 0])
+  ("words_unq" .
+   [1 0 0 0 0 0 0 0 0])
+  ("words_p" .
+   [3 0 0 0 0 0 0])
+  ("shard_line" .
+   [5 0 0 0 0 0 0 0 0 0])
+  ("shard_eof" .
+   [2 0 0 0 0 0 0 0 0])
+  ("add_newline" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("dst" .
+   [1 0 0])
+  ("nr_fixed_columns" .
+   [0 0 0 0 1 2 0 0 0 0 0 0 0 0 0 0])
+  ("nr_columns_per_shard" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("num_columns_per_shard" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("line_zero" .
+   [1 0 0 0 0 0 0 0 0])
+  ("lines" .
+   [1 0 0 0 1])
+  ("sorted" .
+   [7 0 0 0 0 0])
+  ("fixed" .
+   [8 0 0 0 0])
+  ("eof_vec" .
+   [6 0 0 0 0 1 0])
+  ("pop_not_eof" .
+   [0 0 0 0 0 0 0 1 0 0 0])
+  ("sub_lines" .
+   [15 0 0 0 0 1 0 0 0])
+  ("collect_all_sub_lines" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("permute_line" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("concat_lines" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("index" .
+   [2 0 0 0 0])
+  ("unsorted" .
+   [5 0 0 0 4 0 1 0])
+  ("nset" .
+   [1 0 0 0])
+  ("dummy" .
+   [1 0 0 0 0])
+  ("zGQ1" .
+   [1 0 0 0])
+  ("setDna" .
+   [0 0 0 0 1 0])
+  ("al" .
+   [1 0])
+  ("topAQ" .
+   [1 0 0 0 0])
+  ("dai" .
+   [2 0 0])
+  ("COUNT" .
+   [0 0 1 0 0])
+  ("top_AQ" .
+   [1 0 0 0 0 0])
+  ("v_pk" .
+   [2 0 0 0])
+  ("val" .
+   [2 0 0])
+  ("key" .
+   [18 0 0])
+  ("kv" .
+   [1 0])
+  ("dsals2" .
+   [2 0 0 0 0 0])
+  ("S_IRWXU" .
+   [1 0 0 0 0 0 0])
+  ("retval" .
+   [10 0 0 0 0 0])
+  ("ptr" .
+   [2 0 0])
+  ("copy" .
+   [1 0 0 0])
+  ("resize" .
+   [7 0 0 0 0 0])
+  ("header" .
+   [4 0 0 0 0 0])
+  ("unique_p" .
+   [3 0 0 0 0 0 0 1])
+  ("column_names" .
+   [0 0 0 0 0 0 0 1 0 0 0 0])
+  ("strlen" .
+   [1 0 0 0 0 0])
+  ("word" .
+   [5 0 0 0])
+  ("c_str" .
+   [4 0 1 1 0])
+  ("staging_line" .
+   [1 0 0 0 0 1 2 1 0 0 0 0])
+  ("MAX_LINE_SIZE" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("G" .
+   [1])
+  ("M" .
+   [2])
+  ("nchars" .
+   [3 0 0 0 0 0])
+  ("buf" .
+   [9 0 0])
+  ("elem" .
+   [2 0 0 0])
+  ("total_len" .
+   [2 0 0 0 0 0 0 0 0])
+  ("nelem" .
+   [6 0 0 0 0])
+  ("a" .
+   [4])
+  ("u" .
+   [1])
+  ("vec" .
+   [10 0 0])
+  ("empty_vec" .
+   [0 0 0 0 0 0 0 1 0])
+  ("words" .
+   [25 0 0 0 0])
+  ("args" .
+   [8 0 0 0])
+  ("errmsg" .
+   [5 0 0 0 0 0])
+  ("col_name" .
+   [1 0 0 0 0 0 0 0])
+  ("ss" .
+   [7 0])
+  ("FIXED_COLUMNS" .
+   [0 0 0 4 2 0 0 0 1 0 0 0 0])
+  ("end" .
+   [2 0 0])
+  ("add" .
+   [4 0 0])
+  ("duplicates_check" .
+   [0 0 0 1 1 1 0 0 0 0 0 0 0 0 0 0])
+  ("i" .
+   [4])
+  ("is" .
+   [3 0])
+  ("sample_names" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("dbpath" .
+   [3 0 0 0 0 0])
+  ("vcf_files" .
+   [1 0 0 0 0 0 0 0 0])
+  ("glnexus_scale_cli" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("hts_verbose" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("stderr" .
+   [4 0 0 0 1 0])
+  ("fprintf" .
+   [1 0 0 0 0 0 0])
+  ("cap" .
+   [1 0 0])
+  ("buffer" .
+   [1 0 0 0 0 0])
+  ("fp" .
+   [1 0])
+  ("capacity" .
+   [1 0 0 0 0 0 1 0])
+  ("NULL" .
+   [8 0 0 0])
+  ("g" .
+   [3])
+  ("c" .
+   [5])
+  ("bad" .
+   [3 0 0])
+  ("nullptr" .
+   [0 0 0 1 0 0 0])
+  ("noun_" .
+   [1 0 0 0 0])
+  ("noexcept" .
+   [2 0 0 0 0 0 0 0])
+  ("aborted" .
+   [21 0 0 0 0 0 0])
+  ("abort" .
+   [4 0 0 0 0])
+  ("atomic" .
+   [5 0 0 0 0 0])
+  ("wait_for_all_results" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("statuses" .
+   [2 0 0 0 0 0 0 0])
+  ("valid" .
+   [1 0 0 0 0])
+  ("name" .
+   [14 0 0 0])
+  ("pair" .
+   [11 0 0 0])
+  ("msg" .
+   [1 0 0])
+  ("msg_" .
+   [2 0 0 0])
+  ("code_" .
+   [1 0 0 0 0])
+  ("help_vcf_shard_merge" .
+   [0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("-n" .
+   [1 0])
+  ("-name" .
+   [1 0 0 0 0])
+  ("find" .
+   [5 0 0 0])
+  ("vcfs" .
+   [7 0 0 1])
+  ("ifstream" .
+   [1 0 0 0 0 0 0 0])
+  ("vector" .
+   [19 0 0 0 0 0])
+  ("std" .
+   [22 0 0])
+  ("pack_full_path" .
+   [1 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("path" .
+   [24 0 0 0])
+  ("subprocess" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("dumps" .
+   [2 0 0 0 0])
+  ("JSON" .
+   [2 0 0 0])
+  ("manifest" .
+   [1 0 0 2 3 1 0 0])
+  ("details" .
+   [3 0 0 0 0 0 0])
+  ("dxid" .
+   [2 0 0 0])
+  ("DXFile" .
+   [4 0 0 3 0 0])
+  ("tar" .
+   [1 0 0])
+  ("cm" .
+   [1 0])
+  ("shell" .
+   [1 0 0 0 0])
+  ("download_one_file" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("out" .
+   [5 0 0])
+  ("tar_and_upload_seq" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("tar_dxfile" .
+   [0 0 0 0 0 0 2 0 0 0])
+  ("tar_and_upload" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("num_expected" .
+   [0 0 0 0 0 1 1 0 0 0 0 0])
+  ("files" .
+   [8 0 0 0 0])
+  ("cnt" .
+   [8 0 0])
+  ("P_TYPE" .
+   [0 0 1 0 0 0])
+  ("pack_name" .
+   [3 0 0 0 0 0 2 0 0])
+  ("glo" .
+   [2 0 0])
+  ("the" .
+   [5 0 0])
+  ("pack" .
+   [3 0 0 1])
+  ("gvcf_dir" .
+   [1 0 0 0 0 0 0 0])
+  ("require" .
+   [0 0 0 0 1 0 0])
+  ("required_disk_space_GB" .
+   [0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0])
+  ("get_disk_size_GB" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("GB" .
+   [2 0])
+  ("free" .
+   [3 0 0 0])
+  ("locale" .
+   [0 0 0 0 0 1])
+  ("local_disk_size_GB" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("max_siz" .
+   [0 0 0 0 1 0 1])
+  ("local_disk_size" .
+   [0 0 0 0 0 0 0 0 0 0 2 0 0 0 0])
+  ("pack_dir" .
+   [1 0 0 0 0 0 0 0])
+  ("fids" .
+   [1 0 0 0])
+  ("fil" .
+   [1 0 0])
+  ("create" .
+   [3 0 0 0 0 0])
+  ("max_size_GB" .
+   [4 0 0 0 0 0 0 0 0 0 0])
+  ("AppError" .
+   [1 0 0 0 0 0 1 0])
+  ("size_limit" .
+   [5 0 0 0 0 1 2 0 0 0])
+  ("fid" .
+   [2 0 0])
+  ("append" .
+   [2 0 0 0 0 0])
+  ("results" .
+   [8 0 0 0 0 0 0])
+  ("size" .
+   [39 0 0 0])
+  ("dxfile" .
+   [10 0 0 0 0 0])
+  ("wait_on_close" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("block" .
+   [1 0 0 0 0])
+  ("nr_unpacked" .
+   [0 0 0 0 0 4 0 0 0 0 0])
+  ("nr_already_packed" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("gen_output_hash" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("packages" .
+   [3 0 0 0 0 0 0 0])
+  ("dxpy" .
+   [4 0 0 0])
+  ("optional" .
+   [1 0 0 0 0 0 0 0])
+  ("true" .
+   [2 0 0 0])
+  ("target" .
+   [1 0 0 0 0 0])
+  ("src_folder" .
+   [0 0 0 0 2 1 0 0 0 0])
+  ("proj_id" .
+   [1 0 0 0 0 0 0])
+  ("trg_folder" .
+   [0 0 0 0 1 2 1 1 0 0])
+  ("of" .
+   [1 0])
+  ("string" .
+   [62 0 1 0 0 0])
+  ("prefix" .
+   [4 0 0 0 0 0])
+  ("s" .
+   [14])
+  ("cursor" .
+   [22 0 0 2 0 0])
+  ("column_names_iss" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("push_back" .
+   [7 0 0 0 0 0 1 0 0])
+  ("exception" .
+   [1 0 0 0 0 0 0 0 0])
+  ("columns" .
+   [1 0 0 0 0 0 0])
+  ("columns_iss" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("os" .
+   [1 0])
+  ("endl" .
+   [26 0 0 0])
+  ("Status" .
+   [35 0 0 0 0 0])
+  ("OK" .
+   [10 0])
+  ("ABORTED" .
+   [1 0 1 0 0 0 0])
+  ("first" .
+   [4 0 0 0 0])
+  ("first_col" .
+   [2 0 0 0 0 0 0 0 0])
+  ("empty" .
+   [10 0 0 0 0])
+  ("A" .
+   [2])
+  ("done" .
+   [2 0 0 0])
+  ("StatusCode" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("ok" .
+   [3 0])
+  ("assert" .
+   [3 0 0 0 0 0])
+  ("rc" .
+   [16 0])
+  ("move" .
+   [14 0 0 0])
+  ("eof" .
+   [19 0 0])
+  ("make_unique" .
+   [9 0 0 0 0 0 0 0 0 0 0])
+  ("set" .
+   [2 0 0])
+  ("reset" .
+   [1 0 0 0 0])
+  ("threaded" .
+   [1 0 0 0 0 0 0 0])
+  ("t" .
+   [7])
+  ("filenames" .
+   [3 0 0 0 0 0 0 0 0])
+  ("reader" .
+   [4 0 0 0 0 0])
+  ("what" .
+   [1 0 0 0])
+  ("IOError" .
+   [1 0 1 1 1 0 0])
+  ("filename" .
+   [9 0 0 0 0 0 0 0])
+  ("mainloop" .
+   [1 0 0 0 0 0 0 0])
+  ("cerr" .
+   [20 0 0 0])
+  ("console" .
+   [7 0 0 0 0 0 0])
+  ("failures" .
+   [1 0 0 0 0 0 0 0])
+  ("get" .
+   [12 0 0])
+  ("FileReader" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("reader_p" .
+   [2 0 0 0 0 0 0 0])
+  ("f" .
+   [3])
+  ("second" .
+   [1 0 0 0 0 0])
+  ("sleep" .
+   [2 0 0 0 0])
+  ("e" .
+   [4])
+  ("milliseconds" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("cout" .
+   [3 0 0 0])
+  ("str" .
+   [13 0 0])
+  ("blocking" .
+   [1 0 0 0 0 0 0 0])
+  ("b" .
+   [2])
+  ("ln" .
+   [2 0])
+  ("eof_reached" .
+   [0 0 0 0 0 0 0 1 1 0 0])
+  ("Aborted" .
+   [0 0 0 3 1 2 0])
+  ("col" .
+   [1 0 0])
+  ("queue" .
+   [1 0 0 0 1])
+  ("unique_ptr" .
+   [21 0 1 1 2 5 1 0 0 0])
+  ("lock" .
+   [2 0 0 0])
+  ("QUEUE_CAPACITY" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("push" .
+   [2 0 0 0])
+  ("size_t" .
+   [7 0 1 0 0 0])
+  ("nitemz" .
+   [1 0 0 0 0 0])
+  ("nitems" .
+   [3 0 0 0 0 0])
+  ("pop" .
+   [1 0 0])
+  ("num_threads" .
+   [2 0 0 0 0 0 3 0 0 0 0])
+  ("num_bgzf_compression_threads" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("nthreads_" .
+   [0 0 0 1 0 0 0 0 0])
+  ("queue_depth" .
+   [2 0 0 0 0 0 0 1 1 0 0])
+  ("Invalid" .
+   [4 0 0 0 1 0 0])
+  ("in" .
+   [28 0])
+  ("min" .
+   [1 0 0])
+  ("max" .
+   [1 0 0])
+  ("n" .
+   [1])
+  ("num_bgzf_threads" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("wget" .
+   [1 0 0 0])
+  ("foreground" .
+   [1 0 0 0 0 1 0 0 0 0])
+  ("alloc_workspace" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("background" .
+   [0 0 0 0 1 0 0 0 0 0])
+  ("n_blks" .
+   [0 0 0 3 0 0])
+  ("mt" .
+   [2 0])
+  ("vcf_shard_merge_id" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("sharded" .
+   [1 0 0 0 0 0 0])
+  ("cmp_vcfs" .
+   [0 0 0 0 0 1 0 0])
+  ("pVCF" .
+   [2 0 0 0])
+  ("mergedVCF" .
+   [0 0 0 1 1 0 0 0 0])
+  ("-s" .
+   [1 0])
+  ("buf_size" .
+   [1 0 0 0 0 0 0 0])
+  ("kargs" .
+   [2 0 0 0 0])
+  ("bindings" .
+   [2 0 0 0 0 0 0 0])
+  ("impor" .
+   [2 0 0 0 0])
+  ("an" .
+   [1 0])
+  ("no" .
+   [6 0])
+  ("write_buffer_size" .
+   [4 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0])
+  ("GLnexus" .
+   [1 0 1 0 2 0 0])
+  ("close" .
+   [2 0 0 0 0])
+  ("dsals" .
+   [4 0 0 0 0])
+  ("contigs" .
+   [3 0 0 0 0 0 0])
+  ("sample_count" .
+   [0 0 0 0 0 0 0 0 1 1 0 0])
+  ("sites" .
+   [2 0 0 0 0])
+  ("ropt" .
+   [1 0 0 0])
+  ("xargs" .
+   [1 0 0 0 0])
+  ("ls" .
+   [1 0])
+  ("-l" .
+   [1 0])
+  ("writer_p" .
+   [1 0 0 0 0 0 0 0])
+  ("to_string" .
+   [2 0 0 0 0 0 0 0 0])
+  ("nwords" .
+   [2 0 0 0 0 0])
+  ("oc_crt_lock_read" .
+   [3 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("oc_crt_lock_write" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0])
+  ("oc_crt_unlock" .
+   [1 0 0 0 0 0 0 0 0 2 0 0 0])
+  ("g_lock" .
+   [3 0 0 2 1 0])
+  ("rc2" .
+   [1 0 0])
+  ("cli" .
+   [3 0 0])
+  ("dbdir" .
+   [1 0 0 0 0])
+  ("config_preset" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("nr_threads" .
+   [0 0 0 0 0 3 0 0 0 0])
+  ("alt_upload_buffer" .
+   [0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("-type" .
+   [2 0 0 0 0])
+  ("names" .
+   [1 0 0 0 0])
+  ("topdir" .
+   [1 0 0 0 0 0])
+  ("file" .
+   [3 0 0 0])
+  ("all_files" .
+   [4 0 0 0 0 0 0 0 0])
+  ("split_dir" .
+   [1 0 0 0 0 0 0 0 0])
+  ("nr_files" .
+   [4 0 0 0 0 0 0 0])
+  ("mkdir" .
+   [2 0 0 0 0])
+  ("file_subset" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("subdir" .
+   [2 0 0 0 0 0])
+  ("applets" .
+   [2 0 0 0 0 0 0])
+  ("applets_in_wflow" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("applet_dir" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("all_here_applets" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("Exception" .
+   [0 0 0 0 0 1 0 0 0])
+  ("applet" .
+   [1 0 0 0 0 0])
+  ("low_water_mark" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("result" .
+   [2 0 0 0 0 0])
+  ("String" .
+   [7 0 0 0 0 0])
+  ("upload" .
+   [2 0 0 0 0 0])
+  ("data" .
+   [6 0 0 0])
+  ("shell_cmd" .
+   [0 0 0 0 0 0 1 0 1])
+  ("execCommand" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("cmdLine" .
+   [1 0 0 0 0 0 0])
+  ("bin" .
+   [1 0 0])
+  ("stderr_buf" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("process" .
+   [1 0 0 0 0 0 0])
+  ("stdout_lines" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("stdout_buf" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("error_code" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("instanceType" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("dx" .
+   [2 0])
+  ("mem1_ssd1_x2" .
+   [0 0 0 0 0 0 0 0 1 0 0 0])
+  ("template" .
+   [1 0 0 0 0 0 0 0])
+  ("memory" .
+   [1 0 0 0 0 0])
+  ("runtime" .
+   [1 0 0 0 0 0 0])
+  ("attrs" .
+   [1 0 0 0 0])
+  ("jnode" .
+   [1 0 0 0 0])
+  ("Map" .
+   [2 0 0])
+  ("Entry" .
+   [2 0 0 0 0])
+  ("entry" .
+   [2 0 0 0 0])
+  ("JsonNode" .
+   [10 0 0 0 0 0 0 0])
+  ("prettyPrintJsonNode" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("getValue" .
+   [2 0 0 0 0 3 1 0])
+  ("println" .
+   [6 0 0 0 0 0 0])
+  ("System" .
+   [15 0 0 0 0 0])
+  ("err" .
+   [7 0 0])
+  ("Iterator" .
+   [1 0 0 0 0 0 0 0])
+  ("iter" .
+   [4 0 0 0])
+  ("hasNext" .
+   [1 0 0 0 0 0 0])
+  ("next" .
+   [1 0 0 0])
+  ("java" .
+   [1 0 0 0])
+  ("getKey" .
+   [1 0 0 0 0 0])
+  ("stage2" .
+   [2 0 0 0 0 0])
+  ("substring" .
+   [1 0 0 0 0 0 0 0 0])
+  ("Assert" .
+   [0 0 0 0 0 1])
+  ("assertEquals" .
+   [0 0 0 0 0 0 0 1 2 0 0 0])
+  ("stage1" .
+   [1 0 0 0 0 0])
+  ("contains" .
+   [1 0 0 0 0 0 0 0])
+  ("assertTrue" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("applInEnv" .
+   [2 0 0 0 0 0 1 0 0])
+  ("dependentVars" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("In" .
+   [1 0])
+  ("find_analyses" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("find_data_objects" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("prin" .
+   [1 0 0 0])
+  ("wf_name" .
+   [3 0 0 0 0 0 0])
+  ("num_results" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("stripMargin" .
+   [0 0 0 0 0 1 0 0 0 0 0])
+  ("trim" .
+   [1 0 0 0])
+  ("bash" .
+   [1 0 0 0])
+  ("workflows" .
+   [1 0 0 0 0 0 0 0 0])
+  ("force_build" .
+   [2 0 0 0 0 0 0 1 0 0 0])
+  ("classpath" .
+   [2 0 0 0 0 0 0 0 0])
+  ("trg_dir" .
+   [2 0 0 0 0 0 0])
+  ("gatherOutputs" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("ast_pp" .
+   [1 0 0 0 0 0])
+  ("outputs" .
+   [9 0 0 0 0 0 0])
+  ("Utils" .
+   [18 0 0 0 0])
+  ("encodeAppletVarName" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("getEditVersion" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("getLinkAsJson" .
+   [0 0 0 0 0 0 0 0 1 1 0 0 0])
+  ("outputSpec" .
+   [3 0 0 0 0 0 0 0 0 0])
+  ("inputSpec" .
+   [1 0 0 0 0 0 0 0 0])
+  ("d" .
+   [2])
+  ("TOP_LEVEL" .
+   [0 0 0 0 0 2 0 0 0])
+  ("fauxTaskOutputs" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("callUName" .
+   [0 0 0 0 0 0 1 0 0])
+  ("unqualifiedName" .
+   [0 0 0 1 0 0 0 0 1 0 0 1 0 0 0])
+  ("VarOutput" .
+   [0 0 0 0 1 1 0 0 0])
+  ("tso" .
+   [3 0 0])
+  ("children" .
+   [2 0 0 0 0 0 0 0])
+  ("node" .
+   [1 0 0 0])
+  ("nodes" .
+   [1 0 0 0 0])
+  ("Scope" .
+   [2 0 0 0 0])
+  ("JsString" .
+   [2 0 0 0 0 0 0 0])
+  ("wdlValue" .
+   [9 0 0 0 1 4 1 0])
+  ("wValue" .
+   [2 0 0 1 0 0])
+  ("FLAT_FILE_ARRAY_SUFFIX" .
+   [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("WdlBoolean" .
+   [0 0 0 0 1 3 0 0 0 0])
+  ("WdlBooleanType" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 1 0])
+  ("WdlIntegerType" .
+   [1 0 0 0 0 1 0 0 0 0 0 0 1 0])
+  ("WdlFloatType" .
+   [1 0 0 0 0 0 0 0 0 1 0 1])
+  ("WdlStringType" .
+   [1 0 0 0 0 0 0 0 0 0 0 2 0])
+  ("WdlFileType" .
+   [2 0 0 0 0 0 0 0 1 0 0])
+  ("WdlFile" .
+   [1 0 0 0 0 0 1])
+  ("m" .
+   [1])
+  ("wdlValueOf" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("filesToUpload" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0])
+  ("filesToDownload" .
+   [0 0 0 0 0 0 0 0 2 1 0 0 0 0 0])
+  ("DOWNLOAD_RETRY_LIMIT" .
+   [0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("downloadFiles" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("wdlValueOfForce" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("AppInternError" .
+   [0 0 0 0 0 2 0 0 0 0 0 0 0 0])
+  ("retcode" .
+   [3 0 0 0 0 0 0])
+  ("goodRetcode" .
+   [0 0 0 0 0 0 0 2 0 0 0])
+  ("record" .
+   [2 0 0 0 0 0])
+  ("DXRecord" .
+   [1 0 0 0 0 0 0 0])
+  ("assetId" .
+   [1 0 0 0 0 0 0])
+  ("props" .
+   [3 0 0 0 0])
+  ("describe" .
+   [1 0 0 0 0 0 0 0])
+  ("desc" .
+   [2 0 0 0])
+  ("properties" .
+   [1 0 0 0 0 0 0 0 0 0])
+  ("git_revision" .
+   [1 0 0 0 0 0 2 2 0 0 0 0])
+  ("config" .
+   [7 0 0 0 0 0])
+  ("asset" .
+   [1 0 0 0 0])
+  ("fdetails" .
+   [0 0 1 0 0 0 0 0])
+  ("obj" .
+   [2 0 0])
+  ("js_data" .
+   [1 0 0 0 0 0 0])
+  ("ug_variant_calling" .
+   [1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Region" .
+   [3 0 0 0 0 0])
+  ("region" .
+   [3 0 0 0 0 0])
+  ("regionWidth" .
+   [0 0 0 0 0 0 0 0 1 0 0])
+  ("samRec" .
+   [1 0 0 0 0 0])
+  ("cigar" .
+   [2 0 0 0 0])
+  ("partialRegion" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Pileup" .
+   [3 0 0 0 0 0])
+  ("genotypeLiklihoods" .
+   [0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0])
+  ("Arrays" .
+   [2 0 0 0 0 0])
+  ("getAsVector" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("toArray" .
+   [1 0 0 0 0 0 0])))

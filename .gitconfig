@@ -1,0 +1,10 @@
+[user]
+	name = Ohad Rodeh
+	email = ohad.rodeh@ultimagen.com
+[push]
+	default = simple
+[core]
+	excludesfile = /home/orodeh/.gitignore_global
+	editor = emacs -nw
+[submodule]
+        recurse = true

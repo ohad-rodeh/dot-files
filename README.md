@@ -1,2 +1,2 @@
 # dot-files
-Various auxiliary files for Linux setups
+Various auxiliary files for Linux setup.
