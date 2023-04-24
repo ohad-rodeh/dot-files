@@ -49,7 +49,7 @@ ENV LC_CTYPE=en_US.UTF-8
 # Setup time services
 RUN ln -sf /usr/share/zoneinfo/Israel /etc/localtime
 
-RUN pip3 install cython termcolor numpy pandas scipy pysam
+RUN pip3 install cython termcolor numpy pandas scipy pysam pysam-stubs
 RUN pip install --upgrade numpy
 
 # The CLI binaries are installed in .local

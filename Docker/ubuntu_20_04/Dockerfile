@@ -3,15 +3,27 @@ SHELL ["/bin/bash", "-c"]
 ENV DEBIAN_FRONTEND noninteractive
 ENTRYPOINT ["/bin/bash"]
 
-# Install packages
 RUN apt-get update && \
-    apt-get install -y autoconf apt-utils make curl \
-          tzdata git git-lfs \
-          emacs-nox tree wget ispell sudo \
-          htop bc apt-transport-https lsb-release \
-          libffi-dev python3.8 python3-pip python3-venv \
+    apt-get install -y \
+            autoconf apt-utils \
+            make curl \
+            software-properties-common \
+            tzdata git \
+            htop bc apt-transport-https \
+            lsb-release \
+            sudo \
+            wget \
+            tree
+
+# Add the python repository
+RUN add-apt-repository ppa:deadsnakes/ppa && \
+    apt-get update
+
+# Install packages
+RUN apt-get install -y \
+          libffi-dev python3.10 python3.10-venv \
+          emacs-nox ispell \
           zlib1g-dev \
-          software-properties-common \
           jq zip pkg-config \
           s3cmd \
           cmake h5utils libhdf5-dev libssl-dev \
@@ -29,7 +41,9 @@ RUN apt-get update && \
           r-base-core \
           vim \
           ca-certificates \
-          gnupg
+          gnupg \
+          xcscope-el \
+          fuse3
 
 # install gsutil
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-sdk -y
@@ -52,7 +66,8 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 # Setup time services
 RUN ln -sf /usr/share/zoneinfo/Israel /etc/localtime
 
-RUN pip install cython termcolor numpy pandas scipy pysam
+RUN apt-get install -y python3-pip
+RUN pip install cython termcolor numpy pandas scipy pysam pysam-stubs
 RUN pip install --upgrade numpy
 
 # The CLI binaries are installed in .local

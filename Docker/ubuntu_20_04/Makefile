@@ -1,3 +1,5 @@
+TOP=../..
+
 all : barc_dev
 
 barc_dev: build_homedir
@@ -10,7 +12,13 @@ barc_dev: build_homedir
 
 build_homedir:
 	rm -rf homedir
-	cp -r ../USER_HOME_DIR homedir
+	mkdir -p homedir
+	cp $(TOP)/.emacs homedir/
+	cp -r $(TOP)/.emacs.d homedir/
+	cp $(TOP)/.git-completion.bash homedir/
+	cp $(TOP)/.git-prompt.sh homedir/
+	cp  ~/.gitconfig homedir/
+	cp  ~/.gitignore_global homedir/
 	cp -r ~/.ssh homedir/
 	cp -r ~/.aws homedir/
 
