@@ -61,7 +61,7 @@ ENV LC_ALL=en_US.UTF-8
 ENV LC_CTYPE=en_US.UTF-8
 
 # Set python3 as default python implementation
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.10	 1
 
 # Setup time services
 RUN ln -sf /usr/share/zoneinfo/Israel /etc/localtime
