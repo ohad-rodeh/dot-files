@@ -21,12 +21,12 @@ RUN add-apt-repository ppa:deadsnakes/ppa && \
 
 # Install packages
 RUN apt-get install -y \
-          libffi-dev python3.10 python3.10-venv \
+          libffi-dev python3.8 python3.8-venv python3-pip \
           emacs-nox ispell \
           zlib1g-dev \
           jq zip pkg-config \
           s3cmd \
-          cmake h5utils libhdf5-dev libssl-dev \
+          cmake h5utils libhdf5-dev \
           clang llvm \
           numactl \
           liblz4-dev liblz4-tool \
@@ -43,13 +43,19 @@ RUN apt-get install -y \
           ca-certificates \
           gnupg \
           xcscope-el \
-          fuse3
+          fuse3 \
+          libfuse3-dev
 
 # install gsutil
-RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-sdk -y
+RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
+    apt-get update -y && \
+    apt-get install google-cloud-sdk -y
+
+RUN apt-get install -y libssl-dev
 
 # Upgrade the packages
-RUN apt-get upgrade
+RUN apt-get upgrade -y
 
 # Set the language encoding to utf8
 RUN apt-get install -y locales && \
@@ -61,12 +67,11 @@ ENV LC_ALL=en_US.UTF-8
 ENV LC_CTYPE=en_US.UTF-8
 
 # Set python3 as default python implementation
-RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.10	 1
+RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.8	 1
 
 # Setup time services
 RUN ln -sf /usr/share/zoneinfo/Israel /etc/localtime
 
-RUN apt-get install -y python3-pip
 RUN pip install cython termcolor numpy pandas scipy pysam pysam-stubs
 RUN pip install --upgrade numpy
 
@@ -74,3 +79,6 @@ RUN pip install --upgrade numpy
 ENV PATH="${PATH}:/home/orodeh/.local/bin"
 
 COPY --chown=root homedir/ /root
+
+# Set up documentation
+RUN yes | unminimize
