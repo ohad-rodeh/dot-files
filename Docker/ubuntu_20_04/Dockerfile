@@ -76,7 +76,7 @@ RUN pip install cython termcolor numpy pandas scipy pysam pysam-stubs
 RUN pip install --upgrade numpy
 
 # The CLI binaries are installed in .local
-ENV PATH="${PATH}:/home/orodeh/.local/bin"
+ENV PATH="${PATH}:/root/.local/bin"
 
 COPY --chown=root homedir/ /root
 

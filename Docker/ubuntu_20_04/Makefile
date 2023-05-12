@@ -16,7 +16,8 @@ build_homedir:
 	cp $(TOP)/.emacs homedir/
 	cp -r $(TOP)/.emacs.d homedir/
 	cp $(TOP)/.git-completion.bash homedir/
-	cp $(TOP)/.git-prompt.sh homedir/
+	cp $(TOP)/.profile homedir/
+	cp $(TOP)/.bashrc homedir/
 	cp  ~/.gitconfig homedir/
 	cp  ~/.gitignore_global homedir/
 	cp -r ~/.ssh homedir/
