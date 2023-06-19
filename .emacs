@@ -24,11 +24,11 @@
 (global-set-key [(meta ?g)] 'goto-line)
 
 ;; shortcut make
-(global-set-key (kbd "C-c c") 'compile)
+(global-set-key (kbd "<f9>") 'compile)
 
 (global-set-key (kbd "<end>") 'end-of-line)
 
-(global-set-key (kbd "<C-deletechar>") 'kill-word)
+;;(global-set-key (kbd "C- <deletechar>") 'kill-word)
 
 ;; remove extra white space. This works for all modes.
 (add-hook 'before-save-hook 'delete-trailing-whitespace)

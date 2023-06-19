@@ -20,16 +20,23 @@ RUN apt-get update && \
           liblz4-dev liblz4-tool \
           gdb \
           samtools \
+          bedtools \
           rsync \
           gawk \
           mypy \
           libbsd-dev \
           awscli \
-          openjdk-8-jdk-headless \
+          openjdk-17-jdk-headless \
           r-base-core \
           vim \
           ca-certificates \
           gnupg
+
+# man pages
+RUN apt-get install -y \
+            manpages-posix \
+            manpages-dev \
+            man-db
 
 # install gsutil
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-sdk -y
