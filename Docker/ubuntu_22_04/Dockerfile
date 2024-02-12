@@ -9,7 +9,8 @@ RUN apt-get update && \
           tzdata git git-lfs \
           emacs-nox tree wget ispell sudo \
           htop bc apt-transport-https lsb-release \
-          libffi-dev python3 python3-pip python3-venv \
+          libffi-dev \
+          python3 python3-pip python3-venv python-is-python3 \
           zlib1g-dev \
           software-properties-common \
           jq zip pkg-config \
@@ -30,19 +31,52 @@ RUN apt-get update && \
           r-base-core \
           vim \
           ca-certificates \
-          gnupg
+          gnupg \
+          cscope
 
 # man pages
 RUN apt-get install -y \
             manpages-posix \
+            manpages-posix-dev \
             manpages-dev \
             man-db
 
-# install gsutil
+### libz-ng ###
+#
+# On ubuntu 20.04 building shared libraries fails.
+# Use static linking instead (configure --static).
+#
+ENV LIBZ_NG_VERSION=2.1.6
+RUN wget -q https://github.com/zlib-ng/zlib-ng/archive/refs/tags/${LIBZ_NG_VERSION}.zip && \
+    unzip -q ${LIBZ_NG_VERSION}.zip && \
+    cd zlib-ng-${LIBZ_NG_VERSION} && \
+    ./configure && \
+    make && \
+    make test && \
+    make install
+
+### install docker ###
+RUN apt-get install ca-certificates curl && \
+    install -m 0755 -d /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
+    chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+Run echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+RUN apt-get update -y && \
+    apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+### gsutil ###
 RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-sdk -y
 
 # Upgrade the packages
-RUN apt-get upgrade
+RUN apt-get upgrade --yes
+
+###
 
 # Set the language encoding to utf8
 RUN apt-get install -y locales && \
@@ -63,3 +97,22 @@ RUN pip install --upgrade numpy
 ENV PATH="${PATH}:/home/orodeh/.local/bin"
 
 COPY --chown=root homedir/ /root
+
+### Install docker ###
+
+RUN apt-get install ca-certificates curl && \
+    install -m 0755 -d /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
+    chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+Run echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+RUN apt-get update -y && \
+    apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+RUN apt-get install acl
+RUN setfacl --modify user:ubuntu:rw /var/run/docker.sock

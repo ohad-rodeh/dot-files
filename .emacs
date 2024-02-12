@@ -25,6 +25,8 @@
 
 ;; shortcut make
 (global-set-key (kbd "<f9>") 'compile)
+(global-set-key [(control ?c) ?c] 'compile)
+(global-set-key [(control ?x) ?§] 'next-error)
 
 (global-set-key (kbd "<end>") 'end-of-line)
 
@@ -40,6 +42,7 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 
+(add-to-list 'load-path "~/.emacs.d/xcscope.el")
 (add-to-list 'load-path "~/.emacs.d/elpa")
 (add-to-list 'load-path "~/.emacs.d/elpa/auto-complete-20160710.1544")
 (add-to-list 'load-path "~/.emacs.d/elpa/wdl-mode-20180831.1946")
@@ -49,6 +52,10 @@
 ;; C/C++ modes
 (setq c-default-style "stroustrup")
 (setq c-basic-offset 4)
+
+;; setup for cscope
+(require 'xcscope)
+(cscope-setup)
 
 (defun my-c++-mode-hook ()
   (c-set-offset 'innamespace [0]))

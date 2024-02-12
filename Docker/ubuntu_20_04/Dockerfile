@@ -50,6 +50,7 @@ RUN apt-get install -y \
 # man pages
 RUN apt-get install -y \
             manpages-posix \
+            manpages-posix-dev \
             manpages-dev \
             man-db
 
