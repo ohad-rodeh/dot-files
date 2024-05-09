@@ -16,10 +16,10 @@ build_homedir:
 	cp -r ~/.aws homedir/
 
 build: build_homedir
-	docker build -t barc_dev_u22 .
+	docker build -t barc_dev_u24 .
 
 run:
-	docker run --name barc_box_u22 \
+	docker run --name barc_box_u24 \
 	   --privileged \
 	   --volume /tmp:/tmp \
 	   --volume /Users/orodeh/U/Reference:/Reference:ro \
@@ -27,13 +27,9 @@ run:
 	   --volume /Users/orodeh/U/RNA:/RNA \
            --volume /var/run/docker.sock:/var/run/docker.sock \
 	   --mount source=rnd,destination=/rnd \
-	-it barc_dev_u22
-
-#  To grant ptrace capabilities use:
-#
-#	   --cap-add=SYS_PTRACE
+	-it barc_dev_u24
 
 
 stop:
-	docker stop barc_box_u22  || true
-	docker rm barc_box_u22 || true
+	docker stop barc_box_u24  || true
+	docker rm barc_box_u24 || true

@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 SHELL ["/bin/bash", "-c"]
 ENV DEBIAN_FRONTEND noninteractive
 ENTRYPOINT ["/bin/bash"]
@@ -26,13 +26,15 @@ RUN apt-get update && \
           gawk \
           mypy \
           libbsd-dev \
-          awscli \
           openjdk-17-jdk-headless \
           r-base-core \
           vim \
           ca-certificates \
           gnupg \
           cscope
+
+# doesn't exist here
+#          awscli
 
 # man pages
 RUN apt-get install -y \
@@ -55,29 +57,6 @@ RUN wget -q https://github.com/zlib-ng/zlib-ng/archive/refs/tags/${LIBZ_NG_VERSI
     make test && \
     make install
 
-### install docker ###
-RUN apt-get install ca-certificates curl && \
-    install -m 0755 -d /etc/apt/keyrings && \
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
-    chmod a+r /etc/apt/keyrings/docker.asc
-
-# Add the repository to Apt sources:
-Run echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-RUN apt-get update -y && \
-    apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-### gsutil ###
-RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-sdk -y
-
-# Upgrade the packages
-RUN apt-get upgrade --yes
-
-###
-
 # Set the language encoding to utf8
 RUN apt-get install -y locales && \
     locale-gen "en_US.UTF-8"
@@ -90,30 +69,33 @@ ENV LC_CTYPE=en_US.UTF-8
 # Setup time services
 RUN ln -sf /usr/share/zoneinfo/Israel /etc/localtime
 
-RUN pip3 install cython termcolor numpy pandas scipy pysam pysam-stubs Pyarrow Bio
-RUN pip install --upgrade numpy
+### install python packages ###
+RUN pip install cython termcolor numpy pandas scipy pysam pysam-stubs Pyarrow Bio awscli --break-system-packages
 
 # The CLI binaries are installed in .local
 ENV PATH="${PATH}:/home/orodeh/.local/bin"
 
 COPY --chown=root homedir/ /root
 
+### gsutil ###
+#RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-sdk -y
+
 ### Install docker ###
 
-RUN apt-get install ca-certificates curl && \
-    install -m 0755 -d /etc/apt/keyrings && \
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
-    chmod a+r /etc/apt/keyrings/docker.asc
-
-# Add the repository to Apt sources:
-Run echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-RUN apt-get update -y && \
-    apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
+#RUN apt-get install ca-certificates curl && \
+#    install -m 0755 -d /etc/apt/keyrings && \
+#    curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
+#    chmod a+r /etc/apt/keyrings/docker.asc
+#
+## Add the repository to Apt sources:
+#Run echo \
+#  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+#  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+#  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+#
+#RUN apt-get update -y && \
+#    apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+#
 #RUN apt-get install acl
 #RUN setfacl --modify user:ubuntu:rw /var/run/docker.sock
 # RUN chmod 755 /var/run/docker.sock
