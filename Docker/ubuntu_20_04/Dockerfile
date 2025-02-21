@@ -55,15 +55,15 @@ RUN apt-get install -y \
             man-db
 
 # install gsutil
-RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
-    apt-get update -y && \
-    apt-get install google-cloud-sdk -y
+#RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && \
+#    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - && \
+#    apt-get update -y && \
+#    apt-get install google-cloud-sdk -y
 
 RUN apt-get install -y libssl-dev
 
 # Upgrade the packages
-RUN apt-get upgrade -y
+#RUN apt-get upgrade -y
 
 # Set the language encoding to utf8
 RUN apt-get install -y locales && \
@@ -89,4 +89,4 @@ ENV PATH="${PATH}:/root/.local/bin"
 COPY --chown=root homedir/ /root
 
 # Set up documentation
-RUN yes | unminimize
+#RUN yes | unminimize

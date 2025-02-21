@@ -33,6 +33,10 @@ RUN apt-get update && \
           ca-certificates \
           gnupg \
           cscope
+          libjemalloc-dev \
+          libjemalloc2 \
+          libuuid1 \
+          uuid-dev
 
 # man pages
 RUN apt-get install -y \

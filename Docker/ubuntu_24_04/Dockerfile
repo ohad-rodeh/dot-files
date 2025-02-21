@@ -1,6 +1,6 @@
 FROM ubuntu:24.04
 SHELL ["/bin/bash", "-c"]
-ENV DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 ENTRYPOINT ["/bin/bash"]
 
 # Install packages
@@ -31,7 +31,11 @@ RUN apt-get update && \
           vim \
           ca-certificates \
           gnupg \
-          cscope
+          cscope \
+          libjemalloc-dev \
+          libjemalloc2 \
+          libuuid1 \
+          uuid-dev
 
 # doesn't exist here
 #          awscli
@@ -48,7 +52,7 @@ RUN apt-get install -y \
 # On ubuntu 20.04 building shared libraries fails.
 # Use static linking instead (configure --static).
 #
-ENV LIBZ_NG_VERSION=2.1.6
+ENV LIBZ_NG_VERSION=2.2.1
 RUN wget -q https://github.com/zlib-ng/zlib-ng/archive/refs/tags/${LIBZ_NG_VERSION}.zip && \
     unzip -q ${LIBZ_NG_VERSION}.zip && \
     cd zlib-ng-${LIBZ_NG_VERSION} && \
@@ -82,20 +86,20 @@ COPY --chown=root homedir/ /root
 
 ### Install docker ###
 
-#RUN apt-get install ca-certificates curl && \
-#    install -m 0755 -d /etc/apt/keyrings && \
-#    curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
-#    chmod a+r /etc/apt/keyrings/docker.asc
-#
-## Add the repository to Apt sources:
-#Run echo \
-#  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-#  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-#  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-#
-#RUN apt-get update -y && \
-#    apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-#
-#RUN apt-get install acl
-#RUN setfacl --modify user:ubuntu:rw /var/run/docker.sock
-# RUN chmod 755 /var/run/docker.sock
+RUN apt-get install ca-certificates curl && \
+    install -m 0755 -d /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
+    chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+Run echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+RUN apt-get update -y && \
+    apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+RUN apt-get install acl
+RUN setfacl --modify user:ubuntu:rw /var/run/docker.sock
+RUN chmod 755 /var/run/docker.sock

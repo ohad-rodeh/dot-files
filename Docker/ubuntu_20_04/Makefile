@@ -1,14 +1,34 @@
 TOP=../..
 
-all : barc_dev
+all : run
 
-barc_dev: build_homedir
+build_homedir:
+	rm -rf homedir
+	mkdir -p homedir
+	cp $(TOP)/.emacs homedir/
+	cp -r $(TOP)/.emacs.d homedir/
+	cp $(TOP)/.git-completion.bash homedir/
+	cp $(TOP)/.profile homedir/
+	cp $(TOP)/.bashrc homedir/
+	cp  ~/.gitconfig homedir/
+	cp  ~/.gitignore_global homedir/
+	cp -r ~/.ssh homedir/
+	cp -r ~/.aws homedir/
+
+build: build_homedir
 	docker build -t barc_dev_u20 .
-	docker run --name barc_box_u20 --privileged \
+
+run : build
+	docker run --name barc_box_u20 \
+	   --network host \
+	   --privileged \
 	   --volume /tmp:/tmp \
-	   --volume /Users/orodeh/U/Reference:/root/Reference:ro \
-	   --volume /Users/orodeh/U/Data:/root/Data:ro \
-	-it barc_dev_u20
+	   --volume /Users/orodeh/U/Reference:/Reference:ro \
+	   --volume /Users/orodeh/U/Data:/Data:ro \
+	   --volume /Users/orodeh/U/RNA:/RNA \
+           --volume /var/run/docker.sock:/var/run/docker.sock \
+	   --mount source=rnd,destination=/rnd \
+	-it barc_dev_u24
 
 build_homedir:
 	rm -rf homedir
