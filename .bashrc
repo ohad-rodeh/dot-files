@@ -84,7 +84,7 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 alias rm='rm -i'
-alias repo_rsync='rsync -avzrh -e ssh --exclude ".git" --exclude "*.[aod]"'
+alias repo_rsync='rsync -avzrh -e ssh --exclude ".git" --exclude "*.[aod]" --exclude "*.fasta" --exclude "*.fai" --exclude "cscope*"'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -102,3 +102,8 @@ export CLASSPATH="$CLASSPATH:."
 
 # Git completion
 source $HOME/.git-completion.bash
+
+# Add the rust executables
+if [[ -x $HOME/.cargo/bin ]]; then
+    export PATH="$PATH:$HOME/.cargo/bin"
+fi

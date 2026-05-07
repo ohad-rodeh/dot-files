@@ -59,7 +59,10 @@ RUN wget -q https://github.com/zlib-ng/zlib-ng/archive/refs/tags/${LIBZ_NG_VERSI
     ./configure --zlib-compat --prefix=/opt && \
     make && \
     make test && \
-    make install
+    make install && \
+    rm -f ${LIBZ_NG_VERSION}.zip
+
+#rm -rf zlib-ng-${LIBZ_NG_VERSION}
 
 # Set the language encoding to utf8
 RUN apt-get install -y locales && \
@@ -86,20 +89,25 @@ COPY --chown=root homedir/ /root
 
 ### Install docker ###
 
-RUN apt-get install ca-certificates curl && \
-    install -m 0755 -d /etc/apt/keyrings && \
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
-    chmod a+r /etc/apt/keyrings/docker.asc
+# RUN apt-get install ca-certificates curl && \
+#     install -m 0755 -d /etc/apt/keyrings && \
+#     curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
+#     chmod a+r /etc/apt/keyrings/docker.asc
+#
+# # Add the repository to Apt sources:
+# RUN echo \
+#   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+#   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+#   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+#
+# RUN apt-get update -y && \
+#     apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+#
+# #RUN apt-get install acl
+# #RUN setfacl --modify user:ubuntu:rw /var/run/docker.sock
+# #RUN chmod 755 /var/run/docker.sock
+#
 
-# Add the repository to Apt sources:
-Run echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-RUN apt-get update -y && \
-    apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
-RUN apt-get install acl
-RUN setfacl --modify user:ubuntu:rw /var/run/docker.sock
-RUN chmod 755 /var/run/docker.sock
+### Install rust ###
+#RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+#RUN . "$HOME/.cargo/env"
