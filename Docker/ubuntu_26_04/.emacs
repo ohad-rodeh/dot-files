@@ -1,11 +1,59 @@
-;; get rid of menu bar
+;; setting up packages ---------------
+;;(setq package-check-signature nil) ; Temporary workaround
+;; OR a slightly more specific version:
+;; (setq package-check-signature 'allow-unsigned)
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; Optional: also add the non-GNU ELPA archive
+;;(add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
+
 (package-initialize)
 
+;; -----------------------------------
+
+(use-package eglot
+  :ensure nil ;; It's built-in to Emacs 29+
+  :hook
+  (c-mode . eglot-ensure)
+  (c++-mode . eglot-ensure))
+
+(setq eglot-stay-out-of '(flymake))
+(add-hook 'eglot-managed-mode-hook
+          (lambda ()
+            (setq-local eglot-format-on-save nil)
+            (setq-local eglot-ontype-format nil)))
+(setq eglot-ignored-server-capabilities '(:documentFormattingProvider
+                                          :documentRangeFormattingProvider
+                                          :onTypeFormattingProvider))
+
+(use-package company
+  :ensure t
+  :init
+  (global-company-mode)
+  :config
+  (setq company-idle-delay 0.1         ;; Delay until popup appears
+        company-minimum-prefix-length 2 ;; Show after 2 characters
+        company-selection-wrap-around t ;; Loop back to top of list
+        company-tooltip-align-annotations t)
+
+  ;; Use C-n and C-p to navigate the completion menu
+  (with-eval-after-load 'company
+    (define-key company-active-map (kbd "C-n") 'company-select-next)
+    (define-key company-active-map (kbd "C-p") 'company-select-previous)))
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip ((t (:background "white" :foreground "black"))))
+ '(company-tooltip-selection ((t (:background "blue" :foreground "white")))))
+
+
+(xterm-mouse-mode 1)
+
+;; get rid of menu bar
 (menu-bar-mode 0)
 
 ;; tabs to spaces
@@ -37,10 +85,6 @@
 ;; Show column numbers
 (column-number-mode)
 
-(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
-
 (add-to-list 'load-path "~/.emacs.d/elpa")
 
 ;; C/C++ modes
@@ -67,11 +111,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (command-log-mode typescript-mode ## yaml-mode xcscope scala-mode sbt-mode markdown-mode cl-format auto-complete))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
-)
+   '(auto-complete cl-format command-log-mode company
+                   gnu-elpa-keyring-update markdown-mode sbt-mode
+                   scala-mode typescript-mode xcscope yaml-mode)))
