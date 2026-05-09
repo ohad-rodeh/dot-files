@@ -13,6 +13,7 @@ RUN apt-get update && \
           build-essential \
           ca-certificates \
           clang \
+          clangd \
           cscope \
           curl \
           default-jdk-headless \
@@ -58,7 +59,7 @@ RUN apt-get install -y \
 # On ubuntu 20.04 building shared libraries fails.
 # Use static linking instead (configure --static).
 #
-ENV LIBZ_NG_VERSION=2.2.1
+ENV LIBZ_NG_VERSION=2.3.3
 RUN wget -q https://github.com/zlib-ng/zlib-ng/archive/refs/tags/${LIBZ_NG_VERSION}.zip && \
     unzip -q ${LIBZ_NG_VERSION}.zip && \
     cd zlib-ng-${LIBZ_NG_VERSION} && \
@@ -85,9 +86,9 @@ RUN ln -sf /usr/share/zoneinfo/Israel /etc/localtime
 COPY --chown=root homedir/ /root
 
 ### install python packages ###
-RUN python -m venv ~/.venv && \
-    source ~/.venv/bin/activate
-RUN pip install \
+RUN python3 -m venv ~/.venv && \
+    source ~/.venv/bin/activate \
+    python -m pip install \
     Bio \
     cython \
     numpy \
@@ -109,5 +110,5 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv
     rm -f awscliv2.zip
 
 ### Install rust ###
-RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+RUN curl --proto '=https' --tlsv1.3 -sSf https://sh.rustup.rs | sh -s -- -y
 RUN . "$HOME/.cargo/env"

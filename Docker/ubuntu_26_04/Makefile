@@ -23,10 +23,14 @@ run: build
 	   --network host \
 	   --privileged \
 	   --volume /tmp:/tmp \
-	   --volume /Users/ohadrodeh/U/Reference:/Reference:ro \
-	   --volume /Users/ohadrodeh/U/Data:/Data:ro \
-	   --volume /Users/ohadrodeh/U/RNA:/RNA \
-	   --volume /Users/ohadrodeh/U/Code:/Code \
+	   --mount source=rnd,destination=/rnd \
+	-it barc_dev_u26
+
+run_no_build:
+	docker run --name barc_box_u26 \
+	   --network host \
+	   --privileged \
+	   --volume /tmp:/tmp \
 	   --mount source=rnd,destination=/rnd \
 	-it barc_dev_u26
 

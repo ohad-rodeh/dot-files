@@ -1,15 +1,11 @@
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+;; get rid of menu bar
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
 (package-initialize)
 
-(add-to-list 'load-path "~/.emacs.d/xcscope.el")
-
-
-;; auto-complete mode
-(require 'auto-complete-config)
-(ac-config-default)
-
-;; get rid of menu bar
 (menu-bar-mode 0)
 
 ;; tabs to spaces
@@ -29,7 +25,6 @@
 
 ;; shortcut make
 (global-set-key (kbd "<f9>") 'compile)
-(global-set-key [(control ?c) ?c] 'compile)
 (global-set-key [(control ?x) ?§] 'next-error)
 
 (global-set-key (kbd "<end>") 'end-of-line)
@@ -42,44 +37,41 @@
 ;; Show column numbers
 (column-number-mode)
 
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
+
+(add-to-list 'load-path "~/.emacs.d/elpa")
+
 ;; C/C++ modes
 (setq c-default-style "stroustrup")
 (setq c-basic-offset 4)
-
-;; setup for cscope
-(require 'xcscope)
-(cscope-setup)
 
 (defun my-c++-mode-hook ()
   (c-set-offset 'innamespace [0]))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
+
 ;; Markdown mode
-;(autoload 'markdown-mode "markdown-mode"
-;  "Major mode for editing Markdown files" t)
+(autoload 'markdown-mode "markdown-mode"
+  "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ;; Javascript
 (setq js-indent-level 2)
-;;(setq js-indent-level 2)
-
-;; wdl mode
-(autoload 'wdl-mode "wdl-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.wdl\\'" . wdl-mode))
-
-;; enable auto-complete in rust mode
-(add-to-list 'ac-modes 'rust-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(auto-complete markdown-mode)))
+ '(package-selected-packages
+   (quote
+    (command-log-mode typescript-mode ## yaml-mode xcscope scala-mode sbt-mode markdown-mode cl-format auto-complete))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+)
