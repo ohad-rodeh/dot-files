@@ -87,17 +87,17 @@ COPY --chown=root homedir/ /root
 
 ### install python packages ###
 RUN python3 -m venv ~/.venv && \
-    source ~/.venv/bin/activate \
+    source ~/.venv/bin/activate && \
     python -m pip install \
-    Bio \
-    cython \
-    numpy \
-    pysam \
-    Pyarrow \
-    pandas \
-    scipy \
-    termcolor \
-    mypy
+        Bio \
+        cython \
+        numpy \
+        pysam \
+        Pyarrow \
+        pandas \
+        scipy \
+        termcolor \
+        mypy
 
 # The CLI binaries are installed in .local
 ENV PATH="${PATH}:/home/orodeh/.local/bin"
