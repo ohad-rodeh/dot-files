@@ -19,6 +19,7 @@
   (c++-mode . eglot-ensure))
 
 (setq eglot-stay-out-of '(flymake))
+(setq eglot-format-on-save nil)
 (add-hook 'eglot-managed-mode-hook
           (lambda ()
             (setq-local eglot-format-on-save nil)
@@ -51,8 +52,6 @@
  '(company-tooltip-selection ((t (:background "blue" :foreground "white")))))
 
 
-(xterm-mouse-mode 1)
-
 ;; get rid of menu bar
 (menu-bar-mode 0)
 
@@ -73,6 +72,7 @@
 
 ;; shortcut make
 (global-set-key (kbd "<f9>") 'compile)
+(global-set-key (kbd "C-c c") 'compile)
 (global-set-key [(control ?x) ?§] 'next-error)
 
 (global-set-key (kbd "<end>") 'end-of-line)

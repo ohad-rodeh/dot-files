@@ -23,6 +23,7 @@ run: build
 	   --network host \
 	   --privileged \
 	   --volume /tmp:/tmp \
+	   --volume /var/run/docker.sock:/var/run/docker.sock \
 	   --mount source=rnd,destination=/rnd \
 	-it barc_dev_u26
 
@@ -31,9 +32,12 @@ run_no_build:
 	   --network host \
 	   --privileged \
 	   --volume /tmp:/tmp \
+	   --volume /var/run/docker.sock:/var/run/docker.sock \
 	   --mount source=rnd,destination=/rnd \
 	-it barc_dev_u26
 
 stop:
 	docker stop barc_box_u26  || true
+
+container_rm :
 	docker rm barc_box_u26 || true

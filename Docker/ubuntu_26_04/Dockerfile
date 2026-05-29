@@ -56,8 +56,6 @@ RUN apt-get install -y \
 
 ### libz-ng ###
 #
-# On ubuntu 20.04 building shared libraries fails.
-# Use static linking instead (configure --static).
 #
 ENV LIBZ_NG_VERSION=2.3.3
 RUN wget -q https://github.com/zlib-ng/zlib-ng/archive/refs/tags/${LIBZ_NG_VERSION}.zip && \
@@ -112,3 +110,27 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv
 ### Install rust ###
 RUN curl --proto '=https' --tlsv1.3 -sSf https://sh.rustup.rs | sh -s -- -y
 RUN . "$HOME/.cargo/env"
+
+### Install Docker
+
+RUN install -m 0755 -d /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc && \
+    chmod a+r /etc/apt/keyrings/docker.asc
+
+RUN tee /etc/apt/sources.list.d/docker.sources <<EOF
+X-Type-Deb: yes
+Types: deb
+URIs: https://download.docker.com/linux/ubuntu
+Suites: resolute
+Components: stable
+Architectures: arm64
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+RUN apt update && \
+    apt install -y \
+       docker-ce \
+       docker-ce-cli \
+       containerd.io \
+       docker-buildx-plugin \
+       docker-compose-plugin
