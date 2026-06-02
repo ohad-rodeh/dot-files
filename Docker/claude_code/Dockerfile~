@@ -98,7 +98,7 @@ RUN python3 -m venv ~/.venv && \
         mypy
 
 # The CLI binaries are installed in .local
-ENV PATH="${PATH}:/root/.local/bin"
+ENV PATH="${PATH}:/home/orodeh/.local/bin"
 
 ## Install AWSs CLI version 2
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip" && \
